@@ -1,22 +1,23 @@
 Skip failing configure checks during cross-compile builds (bug #473372).
 
---- vim-8.0.0617/src/configure.ac
-+++ vim-8.0.0617/src/configure.ac
-@@ -3303,7 +3303,7 @@
+--- a/src/configure.ac
++++ b/src/configure.ac
+@@ -3441,7 +3441,7 @@ else
  # include <stddef.h>
  #endif
- main() {char *s; s=(char *)tgoto("%p1%d", 0, 1); exit(0); }],
+ main() {char *s; s=(char *)tgoto("%p1%d", 0, 1); exit(0); }])],
 -			  res="OK", res="FAIL", res="FAIL")
 +			  res="OK", res="FAIL", res="OK")
        if test "$res" = "OK"; then
  	break
        fi
-@@ -3373,7 +3373,7 @@
+@@ -3512,7 +3512,7 @@ main()
      ],[
-       vim_cv_tgent=non-zero
+       vim_cv_tgetent=non-zero
      ],[
 -      AC_MSG_ERROR(failed to compile test program.)
 +	  vim_cv_tgent=zero
      ])
    ])
  
+-- 
