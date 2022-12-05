@@ -1,0 +1,15 @@
+https://bugs.gentoo.org/881385
+https://github.com/vim-perl/vim-perl/issues/267#issuecomment-803380012
+https://github.com/vim-perl/vim-perl/commit/5bca9143767a5eef887bea5c6543a3f25961fc63
+2022-04-27 commit 5bca914
+
+--- a/runtime/indent/perl.vim
++++ b/runtime/indent/perl.vim
+@@ -133,6 +133,7 @@ function! GetPerlIndent()
+                         \ || synid == "perlHereDoc"
+                         \ || synid == "perlBraces"
+                         \ || synid == "perlStatementIndirObj"
++                        \ || synid == "perlSubDeclaration"
+                         \ || synid =~ "^perlFiledescStatement"
+                         \ || synid =~ '^perl\(Sub\|Block\|Package\)Fold'
+                 let brace = strpart(line, bracepos, 1)
