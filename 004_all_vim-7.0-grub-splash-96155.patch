@@ -1,6 +1,8 @@
+diff --git a/runtime/syntax/grub.vim b/runtime/syntax/grub.vim
+index 3743ae3..232a37c 100644
 --- a/runtime/syntax/grub.vim
 +++ b/runtime/syntax/grub.vim
-@@ -27,7 +27,7 @@
+@@ -27,7 +27,7 @@ syn match   grubBegin         display '^'
  
  syn cluster grubCommands      contains=grubCommand,grubTitleCommand
  
